@@ -29,12 +29,30 @@ this.state=state;
      * Changes state according to event transition rules.
      * @param event
      */
-    trigger(event) {}
+     trigger(event) {
+        //this.state=event.state;
+        if(this.event='study')
+            
+                this.state='busy';
+
+        else
+            if(this.event='get_up')
+                this.state='normal';
+            else 
+                this.state='normal';
+        //if (this.event=='get_hungry' && this.state=='busy') 
+         //   this.state='hangry';
+       // else
+        //    (this.event='get_tired') 
+         //   this.state='sleeping';
+    }
 
     /**
      * Resets FSM state to initial.
      */
-    reset() {}
+    reset() {
+        this.state='normal'
+    }
 
     /**
      * Returns an array of states for which there are specified event transition rules.
